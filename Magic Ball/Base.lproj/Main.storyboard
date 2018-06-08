@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7V-FA-1xm">
+                                <rect key="frame" x="52.666666666666657" y="154" width="268.66666666666674" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpY-RP-oBc">
+                                <rect key="frame" x="0.0" y="589" width="375" height="94"/>
+                                <color key="backgroundColor" red="0.94172638654708862" green="0.85098618268966675" blue="0.045575350522994995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="70"/>
+                                <state key="normal" title="ASK">
+                                    <color key="titleColor" red="0.089773766696453094" green="0.0857587531208992" blue="0.75195175409317017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJv-oq-b8z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="1MR-2j-iep">
+                                <rect key="frame" x="47" y="287" width="280" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="MR1-BU-cUc"/>
+                                    <constraint firstAttribute="width" constant="280" id="f0W-3E-5Ra"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34402734041213989" green="0.56624323129653931" blue="0.90766698122024536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z7V-FA-1xm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xt-Zs-vyp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LpY-RP-oBc" secondAttribute="bottom" constant="95" id="9lc-hG-ryb"/>
+                            <constraint firstItem="1MR-2j-iep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CrI-kt-tEo"/>
+                            <constraint firstItem="LpY-RP-oBc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QRm-yv-5Hq"/>
+                            <constraint firstItem="Z7V-FA-1xm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="UCI-mP-kWK"/>
+                            <constraint firstItem="1MR-2j-iep" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nax-uZ-fm2"/>
+                            <constraint firstItem="LpY-RP-oBc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJB-iy-N08"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ballImage" destination="1MR-2j-iep" id="n6W-46-ZCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.729064039408868"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="457" height="410"/>
+    </resources>
+</document>
